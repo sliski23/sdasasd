@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>DOC</title>
+
+    <style>
+        .cegla {
+            background-color: orange;
+            border: 2px solid black;
+            height: 50px;
+            display: inline-block;
+        }
+        #murek {
+            display: flex;
+            flex-wrap: wrap-reverse; /* Ensures new rows are added at the bottom */
+            flex-direction: row; /* Bricks fill left-to-right */
+            justify-content: flex-start; /* Align bricks to the left */
+            align-content: flex-start; /* Align rows at the top */
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="przycisk">Cegla please</button>
+    <div id="murek"></div>
+    <script>
+        const murek = document.getElementById("murek");
+        const przycisk = document.getElementById("przycisk");
+        przycisk.addEventListener("click", dodajCegle);
+        let ceglaNr = 0;
+        let sumaSzerokosciCegiel = 0;
+        function dodajCegle() {
+            const cegla = document.createElement("div");
+            cegla.className = "cegla";
+            const rozmiarCegly =  zwrocRozmiarCegly(20, 200);
+            sumaSzerokosciCegiel += rozmiarCegly;
+            cegla.style.width = rozmiarCegly + "px";
+            cegla.innerHTML += ++ceglaNr;
+            murek.appendChild(cegla)
+        }
+
+        function pobierzLosowaSzerokoscCegly(min, max) {
+            return Math.floor(Math.random() * max) + min;
+        }
+
+        function zwrocRozmiarCegly() { 
+            if (window.innerWidth - sumaSzerokosciCegiel < 200) {
+                const temp = sumaSzerokosciCegiel;
+                sumaSzerokosciCegiel = 0;
+                return window.innerWidth - temp;
+            } else {
+                return pobierzLosowaSzerokoscCegly(20, 200);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
