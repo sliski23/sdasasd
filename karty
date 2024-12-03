@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karty</title>
+    <style>
+		body{
+			background-color:black;
+			background-size: cover;
+			}
+        #karty{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .karta{
+            position:relative;
+            background-color:white;
+            height:500px;
+            width:300px;
+            margin:30px;
+            border-radius:30px;
+			transform-style: preserve-3d;
+			
+			
+        }
+		.karta:hover{
+		transform:rotateY(180deg);
+		transition: all 2s;
+		}
+        .symbol{
+            position:absolute;
+            font-size: 50px;
+            display:flex;
+            flex-direction: column;
+        }
+        .odwrot{
+            font-size: 50px;
+            display:flex;
+            flex-direction: column;
+            transform: rotate(180deg);
+            bottom:0%;
+            right:0%;
+        }
+        .symbolduzy{
+            position:absolute;
+            top:50%;
+            left:50%;
+            font-size: 150px;
+            text-align:center;
+            transform: translate(-50%, -50%);
+        }
+        .symbolduzyserce{
+            position:absolute;
+            top:50%;
+            left:50%;
+            font-size: 150px;
+            text-align:center;
+            transform: translate(-50%, -100%);
+        }
+        .symbolduzyright{
+            position:absolute;
+            font-size: 140px;
+            display:flex;
+            flex-direction: column;
+            right:10%;
+        }
+        .symbolduzyleft{
+            position:absolute;
+            font-size: 140px;
+            display:flex;
+            flex-direction: column;
+            left:10%
+        }
+        .divynormalne10{
+            position:absolute;
+            font-size: 100px;
+            display:flex;
+            flex-direction: column;
+            left:10%
+        }
+        .divynormalne10p{
+            position:absolute;
+            font-size: 100px;
+            display:flex;
+            flex-direction: column;
+            right:10%;
+        }
+        .divodwrot10{
+            position:absolute;
+            font-size: 100px;
+            display:flex;
+            flex-direction: column;
+            left:10%;
+            bottom:5%;
+            transform: rotate(180deg);
+        }
+        .divodwrot10p{
+            position:absolute;
+            font-size: 100px;
+            display:flex;
+            flex-direction: column;
+            right:10%;
+            bottom:5%;
+            transform: rotate(180deg);
+        }
+        .divnormalnyjeden{
+            position:absolute;
+            top:6%;
+            left:36%;
+            font-size: 150px;
+            text-align:center;
+        }
+        .divodwrotjeden{
+            position:absolute;
+            bottom:9%;
+            right:36%;
+            font-size: 150px;
+            text-align:center;
+            transform: rotate(180deg);
+        }
+		.kartal{
+			position:relative;
+            height:500px;
+            width:250px;
+            margin:30px;
+            border-radius:30px;
+			background-color: #e5e5f7;
+			opacity: 0.8;
+			background-image:  linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777);
+			background-size: 20px 35px;
+			background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+		}
+		.kartaBack{
+		  position:relative;
+            background-color:white;
+            height:500px;
+            width:250px;
+            margin:30px;
+            border-radius:30px;
+			background-color: #e5e5f7;
+			opacity: 0.8;
+			background-image:  linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777);
+			background-size: 20px 35px;
+			background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px
+		}
+		
+		
+		
+		
+    </style>
+</head>
+<body>
+    <div id="karty">
+        <div class="karta">
+		
+            <div class="symbol">
+                <div>A</div>
+                <div>&spades;</div>
+            </div>
+            <div class="symbolduzy">
+                <div>&spades;</div>
+            </div>
+            <div class="symbol odwrot">
+                <div>A</div>
+                <div>&spades;</div>
+            </div>
+			<div class="kartaBack">
+			
+			</div>
+			
+        </div>
+		
+
+
+        <div class="karta">
+            <div class="symbol">
+                <div>7</div>
+                <div>&hearts;</div>
+            </div>
+            <div class="symbolduzyleft">
+                <div>&hearts;</div>
+                <div>&hearts;</div>
+                <div>&hearts;</div>
+            </div>
+            <div class="symbolduzyright">
+                <div>&hearts;</div>
+                <div>&hearts;</div>
+                <div>&hearts;</div>
+            </div>
+            <div class="symbolduzyserce">
+                <div>&hearts;</div>
+            </div>
+            <div class="symbol odwrot">
+                <div>7</div>
+                <div>&hearts;</div>
+            </div>
+        </div>
+        <div class="karta">
+            <div class="symbol">
+                <div>10</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divynormalne10">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divynormalne10p">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divnormalnyjeden">
+                <div>&clubs;</div>
+            </div>
+            <div class="symbol odwrot">
+                <div>10</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divodwrot10">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div> 
+            <div class="divodwrot10p">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div> 
+            <div class="divodwrotjeden">
+                <div>&clubs;</div>
+            </div>
+        </div>
+		<div class="kartal">  
+		</div>		
+			
+         <div class="karta">
+		 
+            <div class="symbol">
+                <div>9</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divynormalne10">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divynormalne10p">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divnormalnyjeden">
+                <div>&clubs;</div>
+            </div>
+            <div class="symbol odwrot">
+                <div>9</div>
+                <div>&clubs;</div>
+            </div>
+            <div class="divodwrot10">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div> 
+            <div class="divodwrot10p">
+                <div>&clubs;</div>
+                <div>&clubs;</div>
+            </div> 
+           
+		
+    </div>
+</body>
+</html>
